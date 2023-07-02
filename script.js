@@ -465,4 +465,25 @@ console.log(h1.parentElement.children);
     if (element != h1) element.style.transform = 'scale(0.5';
 });
 
+
+
+// Lifecycle DOM Events
+
+// Event is fired as soon as HTML and JS are loaded.
+document.addEventListener('DOMContentLoaded', function (event) {
+    console.log('HTML parsed and DOM Tree is built!', event);
+})
+
+// Event is fired as soon as page is completely loaded including images etc.
+document.addEventListener('load', function (event) {
+    console.log('HTML parsed and DOM Tree is built!', event);
+})
+
+// Event fired when user closes tab, try to leave the page.
+window.addEventListener('beforeunload', function (event) {
+    // event.preventDefault() // Doesn't work on Safari Browser
+    console.log(event)
+    event.returnValue = ''
+})
+
 */
