@@ -269,7 +269,6 @@ function slider () {
 
     // Event Handlers
     document.addEventListener('keydown', function (event) {
-        console.log(event);
         if (event.key === 'ArrowLeft') previousSlide();
         event.key === 'ArrowRight' && nextSlide();
     });
